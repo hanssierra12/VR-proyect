@@ -1,0 +1,138 @@
+body {
+    display: none;  /* Oculta todo el contenido por defecto */
+}
+
+/* Mostrar contenido solamente en dispositivos móviles */
+@media screen and (max-width: 500px) {
+    body {
+        display: flex;
+        font-family: 'Open Sans', sans-serif;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        padding: 10px;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        margin-top: 50px; /* Ajusta este valor para mover el título más abajo */
+    }
+    
+    h2 {
+        font-size: 14px;
+        margin-top: 30px; /* Incrementado para mover el nombre del producto más abajo */
+        margin-bottom: 20px;
+        text-align: center;
+        align-self: center;
+        flex-grow: 1;
+    }
+    
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px; /* Espacio ampliado entre el mensaje y los botones */
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 20px; /* Ajusta este valor para mover los botones más abajo */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px; /* Ajusta este valor para mover las tarjetas más abajo */
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
+
+.icon-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.heart-icon {
+    width: 25px;
+    height: 25px;
+    background: url('ruta_icono_corazon.png') no-repeat center;
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.circle-icon {
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.model-container {
+    flex-grow: 1;
+    width: 100%;
+    overflow: hidden; /* Para evitar desbordamientos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Establecer como contenedor de posición para el model-viewer */
+    height: 140px;
+    margin-top: 40px;
+    height: 180px;
+}
+
+model-viewer {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    position: absolute; /* Esto lo posicionará respecto al contenedor */
+    top: 0; 
+    left: 0;
+}
+
+model-viewer::part(ar-button) {
+    transform: translateY(-15px);  /* ajusta este valor según lo que necesites */
+}
+
+
+
+.price {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px; /* Espacio entre el nombre y el precio */
+}
+
+}
